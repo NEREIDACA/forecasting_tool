@@ -83,8 +83,8 @@ const DATA = {
       { label: "Current storage",     val: "84", unit: "%",      sub: "Sau + Susqueda · initial", badge: "ok" },
       { label: "Temp. skill at Sau (NSE)", val: "0.93", unit: "", sub: "vs ERA5 pseudo-obs · lead 1", badge: "ok" }
     ],
-    riv_sau:  { p10:[10.12,5.87,5.81,5.5,7.85,10.22,14.5], p25:[11.28,6.82,6.36,6.99,8.67,11.19,15.14], med:[12.3,7.94,7.68,8.17,9.75,12.28,16.41], p75:[12.81,8.98,8.66,9.37,11.44,13.56,17.59], p90:[13.14,9.67,9.4,10.2,12.17,14.31,19.39], clim:[10.4,7.6,7,7.7,10.3,12.8,16.5] },
-    riv_gola: { p10:[13.01,10.24,9.89,9.79,11.01,12.56,14.72], p25:[13.68,10.72,10.4,10.59,11.33,12.86,15.07], med:[14.17,11.42,10.86,11.2,11.85,13.28,15.48], p75:[14.33,11.74,11.5,11.64,12.6,13.76,16.12], p90:[14.64,12.33,11.9,11.97,12.96,14.12,17.1], clim:[5.6,3.2,2.7,3.3,5.5,7.6,10.8] },
+    riv_sau:  { p10:[10.12,5.87,5.81,5.5,7.85,10.22,14.5], p25:[11.28,6.82,6.36,6.99,8.67,11.19,15.14], med:[12.3,7.94,7.68,8.17,9.75,12.28,16.41], p75:[12.81,8.98,8.66,9.37,11.44,13.56,17.59], p90:[13.14,9.67,9.4,10.2,12.17,14.31,19.39], obs:[5,-0.47,-1.85,3.28,3.07,4.65,8.92], clim:[10.4,7.6,7,7.7,10.3,12.8,16.5] },
+    riv_gola: { p10:[13.01,10.24,9.89,9.79,11.01,12.56,14.72], p25:[13.68,10.72,10.4,10.59,11.33,12.86,15.07], med:[14.17,11.42,10.86,11.2,11.85,13.28,15.48], p75:[14.33,11.74,11.5,11.64,12.6,13.76,16.12], p90:[14.64,12.33,11.9,11.97,12.96,14.12,17.1], obs:[5,-0.47,-1.85,3.28,3.07,4.65,8.92], clim:[5.6,3.2,2.7,3.3,5.5,7.6,10.8] },
     nse_sau:    [0.93,0.9,0.9,0.9,0.9,0.9,0.91],
     nse_gola:   [-0.94,-0.97,-1,-1.01,-1,-0.99,-0.98],
     crpss_sau:  [-0.11,-0.3,-0.31,-0.29,-0.26,-0.23,-0.21],
@@ -92,15 +92,15 @@ const DATA = {
   },
   reservoir: {
     metrics: [
-      { label: "Sau surface max (p90)",      val: "22.1", unit: "°C", sub: "Peak summer · 7-month", badge: "warn" },
-      { label: "Susqueda surface max (p90)", val: "21.5", unit: "°C", sub: "Peak summer · 7-month", badge: "ok" },
-      { label: "Sau bottom mean",            val: "6.7", unit: "°C", sub: "Climatological median",  badge: "ok" },
-      { label: "Susqueda bottom mean",       val: "7.9", unit: "°C", sub: "Climatological median",  badge: "ok" }
+      { label: "Sau surface max (p90)",      val: "19.9", unit: "°C", sub: "Peak summer · 7-month", badge: "ok" },
+      { label: "Susqueda surface max (p90)", val: "19.6", unit: "°C", sub: "Peak summer · 7-month", badge: "ok" },
+      { label: "Sau bottom mean",            val: "9.3", unit: "°C", sub: "Climatological median",  badge: "ok" },
+      { label: "Susqueda bottom mean",       val: "7.6", unit: "°C", sub: "Climatological median",  badge: "ok" }
     ],
-    sau_surf:    { p10:[11.57,6.75,6.68,6.34,9,11.7,16.55], p25:[12.9,7.83,7.31,8.02,9.93,12.79,17.29], med:[14.05,9.11,8.8,9.37,11.16,14.04,18.73], p75:[14.64,10.28,9.92,10.73,13.08,15.48,20.07], p90:[15.02,11.07,10.77,11.67,13.91,16.34,22.12], clim:[11.9,8.7,8,8.8,11.8,14.6,18.8] },
-    sau_bot:     { p10:[6.63,5.37,4.23,4.58,5.27,5.42,5.61], p25:[7.89,6.26,5.23,5.11,5.58,5.94,6.14], med:[8.45,7.28,6.02,5.69,6.37,6.28,6.85], p75:[9.59,7.92,6.77,6.42,6.81,6.74,7.72], p90:[10.48,9.35,8.21,6.97,7.24,7.07,8.35], clim:[8.3,7.6,6,5.7,6.2,6.6,7] },
-    sqd_surf:    { p10:[12.85,8.88,8.82,8.54,10.73,12.95,16.94], p25:[13.94,9.77,9.34,9.93,11.5,13.85,17.55], med:[14.89,10.82,10.57,11.03,12.51,14.87,18.74], p75:[15.37,11.79,11.49,12.16,14.09,16.06,19.84], p90:[15.68,12.43,12.18,12.93,14.77,16.77,21.52], clim:[13.1,10.5,9.9,10.6,13,15.4,18.8] },
-    sqd_bot:     { p10:[5.61,6.17,6.72,6.15,6.43,6.29,6.52], p25:[8.3,7.07,7.39,6.72,6.74,6.86,6.89], med:[9.5,8.1,7.92,7.36,7.51,7.23,7.37], p75:[11.95,8.74,8.42,8.14,7.94,7.72,7.97], p90:[13.84,10.18,9.39,8.74,8.37,8.09,8.4], clim:[9.2,8.4,7.9,7.4,7.3,7.5,7.5] },
+    sau_surf:    { p10:[14.67,9.12,6.36,6.31,7.78,11.31,17.29], p25:[14.83,9.69,6.83,6.76,8.41,11.94,17.73], med:[14.97,10,7.25,7.32,9.06,12.5,18.11], p75:[15.1,10.32,7.77,7.85,9.78,13.57,18.8], p90:[15.19,10.57,8.16,8.16,10.27,14.79,19.89], obs:[null,null,null,null,null,null,null], clim:[11.9,8.7,8,8.8,11.8,14.6,18.8] },
+    sau_bot:     { p10:[14.07,8.13,6.04,6.3,7.32,8.7,9.54], p25:[14.15,8.38,6.36,6.72,7.79,9.19,10.05], med:[14.25,8.67,6.83,7.14,8.32,9.51,10.32], p75:[14.37,9.17,7.04,7.41,8.8,9.97,10.74], p90:[14.41,9.49,7.47,8.05,9.19,10.39,11.19], obs:[null,null,null,null,null,null,null], clim:[8.3,7.6,6,5.7,6.2,6.6,7] },
+    sqd_surf:    { p10:[13.41,8.46,5.49,5.51,6.79,11.22,16.93], p25:[13.55,9.04,5.97,6,7.38,11.75,17.32], med:[13.71,9.36,6.37,6.46,8.23,12.87,17.86], p75:[13.87,9.85,6.86,6.89,8.93,13.66,18.5], p90:[13.96,10.1,7.45,7.33,9.81,14.74,19.58], obs:[null,null,null,null,null,null,null], clim:[13.1,10.5,9.9,10.6,13,15.4,18.8] },
+    sqd_bot:     { p10:[11.76,6.35,5.2,5.16,6.49,7.13,7.36], p25:[11.82,6.66,5.52,5.65,6.95,7.3,7.44], med:[11.88,6.89,6.04,6.29,7.18,7.53,7.68], p75:[11.93,7.1,6.33,6.72,7.44,7.84,7.94], p90:[11.96,7.21,6.57,7.02,7.67,8.29,8.4], obs:[null,null,null,null,null,null,null], clim:[9.2,8.4,7.9,7.4,7.3,7.5,7.5] },
     nse_rsurf_sau:    [0.93,0.9,0.9,0.9,0.9,0.9,0.91],
     nse_rsurf_sqd:    [0.93,0.9,0.9,0.9,0.9,0.9,0.91],
     crpss_rsurf_sau:  [-0.11,-0.3,-0.31,-0.29,-0.26,-0.23,-0.21],
@@ -299,8 +299,8 @@ const ALERTS = {
 <div class="alert-box ok"><i class="ti ti-circle-check alert-icon"></i><span class="alert-label">Storage outlook:</span> Storage remains above 40% throughout the forecast period (min 85% in noviembre).</div>`,
   temperature: `<div class="alert-box ok"><i class="ti ti-circle-check alert-icon"></i><span class="alert-label">Thermal conditions:</span> River temperature at Sau inlet 10.6°C mean — within normal seasonal range.</div>
 <div class="alert-box ok"><i class="ti ti-circle-check alert-icon"></i><span class="alert-label">Coastal delivery:</span> Temperature at Ter mouth (p90) 17.1°C — normal range for the season.</div>`,
-  reservoir:   `<div class="alert-box warn"><i class="ti ti-alert-triangle alert-icon"></i><span class="alert-label">Sau surface (p90):</span> Surface temperature up to 22.1°C — elevated algae growth risk.</div>
-<div class="alert-box ok"><i class="ti ti-circle-check alert-icon"></i><span class="alert-label">Susqueda surface:</span> Surface temperature within normal range (max p90 21.5°C).</div>`
+  reservoir:   `<div class="alert-box ok"><i class="ti ti-circle-check alert-icon"></i><span class="alert-label">Sau surface:</span> Surface temperature within normal range (max p90 19.9°C).</div>
+<div class="alert-box ok"><i class="ti ti-circle-check alert-icon"></i><span class="alert-label">Susqueda surface:</span> Surface temperature within normal range (max p90 19.6°C).</div>`
 };
 
 function buildAlerts(v) { document.getElementById("alertRow").innerHTML = ALERTS[v]; }
